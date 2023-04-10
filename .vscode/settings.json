@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "argmanip.h": "c",
+    "crtdbg.h": "c",
+    "stdlib.h": "c",
+    "mman.h": "c"
+  }
+}

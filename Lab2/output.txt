@@ -1,0 +1,23 @@
+total 64
+-rwxrwxrwx 1 denniskuzminer denniskuzminer   171 Oct  9 13:32 Makefile
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 17 23:01 exam
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 22 12:46 inputs
+-rwxrwxrwx 1 denniskuzminer denniskuzminer 28544 Oct 22 17:46 nyush
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 22 12:17 nyush-autograder
+-rwxrwxrwx 1 denniskuzminer denniskuzminer 15264 Oct 22 17:45 nyush.c
+-rwxrwxrwx 1 denniskuzminer denniskuzminer 20240 Oct 22 17:46 nyush.o
+-rwxrwxrwx 1 denniskuzminer denniskuzminer     0 Oct 22 17:46 output.txt
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 22 13:09 test
+total 65
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 22 17:46 .
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 19 13:56 ..
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 20 19:29 .vscode
+-rwxrwxrwx 1 denniskuzminer denniskuzminer   171 Oct  9 13:32 Makefile
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 17 23:01 exam
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 22 12:46 inputs
+-rwxrwxrwx 1 denniskuzminer denniskuzminer 28544 Oct 22 17:46 nyush
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 22 12:17 nyush-autograder
+-rwxrwxrwx 1 denniskuzminer denniskuzminer 15264 Oct 22 17:45 nyush.c
+-rwxrwxrwx 1 denniskuzminer denniskuzminer 20240 Oct 22 17:46 nyush.o
+-rwxrwxrwx 1 denniskuzminer denniskuzminer   643 Oct 22 17:46 output.txt
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 22 13:09 test

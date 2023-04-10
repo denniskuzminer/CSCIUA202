@@ -1,0 +1,42 @@
+a.out
+a.txt
+another
+another.c
+cerr.log
+cout.log
+hey.txt
+hi.txt
+hio.txt
+l.txt
+o.txt
+poopoo
+test.c
+a.out
+a.txt
+another
+another.c
+cerr.log
+cout.log
+hey.txt
+hi.txt
+hio.txt
+l.txt
+o.txt
+poopoo
+test.c
+total 52
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 20 19:28 .
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct 20 20:01 ..
+-rwxrwxrwx 1 denniskuzminer denniskuzminer 16960 Oct 10 13:02 a.out
+-rwxrwxrwx 1 denniskuzminer denniskuzminer   194 Oct 20 19:58 a.txt
+-rwxrwxrwx 1 denniskuzminer denniskuzminer 21040 Oct 20 19:04 another
+-rwxrwxrwx 1 denniskuzminer denniskuzminer  2565 Oct 20 19:06 another.c
+-rwxrwxrwx 1 denniskuzminer denniskuzminer     0 Oct 10 12:58 cerr.log
+-rwxrwxrwx 1 denniskuzminer denniskuzminer    29 Oct 10 12:58 cout.log
+-rwxrwxrwx 1 denniskuzminer denniskuzminer    63 Oct 16 16:33 hey.txt
+-rwxrwxrwx 1 denniskuzminer denniskuzminer    65 Oct 19 15:18 hi.txt
+-rwxrwxrwx 1 denniskuzminer denniskuzminer    79 Oct 20 19:20 hio.txt
+-rwxrwxrwx 1 denniskuzminer denniskuzminer    85 Oct 20 19:21 l.txt
+-r-xr-xr-x 1 denniskuzminer denniskuzminer    97 Oct 20 19:28 o.txt
+drwxrwxrwx 1 denniskuzminer denniskuzminer   512 Oct  9 21:19 poopoo
+-rwxrwxrwx 1 denniskuzminer denniskuzminer  2367 Oct 10 12:38 test.c

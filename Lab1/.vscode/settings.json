@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "argmanip.h": "c",
+    "crtdbg.h": "c"
+  }
+}

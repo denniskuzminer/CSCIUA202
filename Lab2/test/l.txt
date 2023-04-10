@@ -1,0 +1,11 @@
+a.out
+another
+another.c
+cerr.log
+cout.log
+hey.txt
+hi.txt
+hio.txt
+l.txt
+poopoo
+test.c

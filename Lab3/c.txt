@@ -1,0 +1,124 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/mman.h>
+#include <fcntl.h>
+#include <pthread.h>
+
+#define NUM_THREADS 4
+
+struct thread_data
+{
+    int thread_id;
+    char *filename;
+    char *data;
+    int length;
+};
+
+void *run_length_encode(void *threadarg)
+{
+    struct thread_data *my_data;
+    my_data = (struct thread_data *)threadarg;
+
+    int thread_id = my_data->thread_id;
+    char *filename = my_data->filename;
+    char *data = my_data->data;
+    int length = my_data->length;
+
+    // do work here
+    int i, count;
+    unsigned char last = 0;
+    FILE *fp = fopen(filename, "w");
+    if (!fp)
+    {
+        fprintf(stderr, "Error opening %s\n", filename);
+        exit(1);
+    }
+
+    for (i = 0; i < length; i++)
+    {
+        if (data[i] == last)
+        {
+            count++;
+        }
+        else
+        {
+            if (i != 0)
+            {
+                fprintf(fp, "%d%c", count, last);
+            }
+            last = data[i];
+            count = 1;
+        }
+    }
+    fprintf(fp, "%d%c", count, last);
+    fclose(fp);
+    pthread_exit(NULL);
+}
+
+int main(int argc, char *argv[])
+{
+    if (argc != 2)
+    {
+        fprintf(stderr, "Usage: %s <input file>\n", argv[0]);
+        exit(1);
+    }
+
+    // open input file
+    char *input_file = argv[1];
+    int fd = open(input_file, O_RDONLY);
+    if (fd == -1)
+    {
+        perror("open");
+        exit(1);
+    }
+
+    // get file size
+    struct stat sb;
+    if (fstat(fd, &sb) == -1)
+    {
+        perror("fstat");
+        exit(1);
+    }
+
+    int length = sb.st_size;
+    char *data;
+
+    // mmap the input file
+    data = mmap(NULL, length, PROT_READ, MAP_PRIVATE, fd, 0);
+    if (data == MAP_FAILED)
+    {
+        perror("mmap");
+        exit(1);
+    }
+
+    int i;
+    pthread_t threads[NUM_THREADS];
+    struct thread_data td[NUM_THREADS];
+
+    // create and run threads
+    for (i = 0; i < NUM_THREADS; i++)
+    {
+        td[i].thread_id = i;
+        td[i].filename = argv[1];
+        td[i].data = data;
+        td[i].length = length;
+        pthread_create(&threads[i], NULL, run_length_encode, (void *)&td[i]);
+    }
+
+    // wait for threads to finish
+    for (i = 0; i < NUM_THREADS; i++)
+    {
+        pthread_join(threads[i], NULL);
+    }
+
+    // cleanup
+    munmap(data, length);
+    close(fd);
+
+    return 0;
+}
